@@ -1,4 +1,4 @@
 package org.greenhouse.sensors;
 
-public class temperature {
+public class ThresholdType {
 }
