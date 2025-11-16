@@ -13,7 +13,7 @@ public class Actuator {
     private boolean state;
 
     //constructor to initialize actuator with id, type, and initial state
-    public actuator(int actuatorId, String actuatorType, boolean initialState) {
+    public Actuator(int actuatorId, String actuatorType, boolean initialState) {
         this.actuatorId = actuatorId;
         this.actuatorType = actuatorType;
         this.state = initialState;

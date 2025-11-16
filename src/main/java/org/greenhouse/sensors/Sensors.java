@@ -17,7 +17,7 @@ public class Sensors {
     public Sensors(int sensorId, String sensorType) {
         this.sensorId = sensorId;
         this.sensorType = sensorType;
-        this.currentValue = initialValue;
+        this.currentValue = initialValue();
     }
 
     //gives the sensor an initial id
@@ -34,6 +34,23 @@ public class Sensors {
     public double getCurrentValue() {
         return currentValue;
     }
+
+    public double initialValue() {
+        switch (sensorType.toLowerCase()) {
+            case "temperature":
+                return 20.0;
+            case "humidity":
+                return 50.0;
+            case "soil_moisture":
+                return 30.0;
+            default:
+                return 0.0;
+        }
+    }
+
+
+
+
 
     //new way to update the sensor value with random variation
     public double readValue() {
